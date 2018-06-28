@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/2.0.js"></script>
+		<link type="text/css" rel="styleSheet" href="css/new_file.css" />
+		<title>21点纸牌游戏</title>
+	</head>
+	<style type="text/css">
+
+	</style>
+
+	<body>
+		<div class="div">
+			<div>
+				<span class="first"><img src="img/背面.jpg"></span>
+				<span class="second"><img src="img/背面.jpg"></span>
+				<span class="third"><img src="img/背面.jpg"></span>
+				<span class="fourth"><img src="img/背面.jpg"></span>
+				<p class="paizu">牌组</p>
+			</div>
+			<div>
+				<span class="holder"><img src="img/庄家.jpg"</span>
+				<p class="holder1">庄家</p>
+			</div>
+			<div>
+				<span class="money1"><img src="img/untitled.png"</span>
+				<p class="money1_num1" id="computerGold""></p>
+			</div>
+			<div>
+				<span class="money2"><img src="img/untitled.png"></span>
+				<p class="money2_num2" id="playerGold"></p>
+			</div>
+			<!--
+            	作者：yuzhitao1998@foxmail.com
+            	时间：2018-06-25
+            	描述：在此完善了外挂的隐藏方式
+            -->
+			<!--外挂-->
+			<div class="bug">
+				<p class="bugarea">公平竞技，拒绝</p>
+				<p id="look">作弊</p>
+				<p class="buglong">抵制不良游戏，拒绝盗版游戏。注意自我保护，预防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活</p>
+			</div>
+			<!--
+            	作者：yuzhitao1998@foxmail.com
+            	时间：2018-06-25
+            	描述：在此加入了游戏规则
+            -->
+			<!--游戏规则-->
+			<div class="Sliderbox">
+				<div class="ftname">
+					<a href="#"><span>游戏规则</span></a>
+					<div class="Sliderinfo" id="jiesao2">
+						<p>该游戏是一个21点的扑克牌游戏，玩家一共可以要5张牌，如果牌的点数超过21，则暴了，自动出局；在不超过21点的情况下，玩家与庄家（计算机）比较牌点数的大小，大者为赢。</p>
+					</div>
+				</div>
+
+			</div>
+			<!-- 牌区 -->
+			<div class="thebiggest cardArea">
+				<!-- computer牌区 -->
+				<table>
+					<tr>
+						<td id="goldWager"></td>
+					</tr>
+					<tr>
+						<td id="computerNum">电脑</td>
+					</tr>
+					<tr id="computerCArea">
+
+					</tr>
+
+					<tr>
+						<td id="playerNum">玩家点数</td>
+					</tr>
+					<!-- player牌区-->
+					<tr id="playerCArea">
+
+					</tr>
+				</table>
+
+				<!-- 发牌 跳过 下注 按钮区 -->
+				<div id="gameEvents">
+					<button id="getCard">发牌</button>
+					<button id="noCard">结算</button>
+					<button id="addWager">加注！</button>
+					<!--<button id="look">看牌</button>   去掉了明显的外挂显示 更改为更隐藏的方式-->
+				</div>
+				<!--
+                	作者：yuzhitao1998@foxmail.com
+                	时间：2018-06-25
+                	描述：将会出现的：  作弊弹框  高级作弊弹框  空白结算框 加注弹框  你赢了弹框   你输了弹框
+                -->
+				<!--作弊弹框-->
+				<div id="bugArea">
+                     <table>
+                     	<tr>
+                     		<td id="nextCard">下一张牌是：</td>
+                     	</tr>
+                     	<tr>
+                     		<td id="nextCardArea"></td>
+                     	</tr>
+                     		<button id="Choose" class="choose">要</button>
+                     		<button id="notChoose" class="choose">不要</button>
+                     </table>
+				</div>
+				<!--高级作弊弹框-->
+				<div id="theOtherBugArea">
+					<!--放弃弹框-->
+					<div class="giveUp">
+						<button id="giveUp">放弃</button>
+					</div>
+					<!--电脑手牌-->
+					<div class="holderCard">
+						<table>
+							<tr>
+								<td class="holderCard1">电脑手牌为</td>
+							</tr>
+							<tr id="holderCArea">
+								
+							</tr>
+						</table>
+					</div>
+					<!--任意选牌区-->
+					<p class="xuanpai">你可选以下任意牌</p>
+					<div class="chooseArea" id="chooseArea">   <!-- 后台给button 上class="chooseCard" -->
+						<!--
+						<button>红桃A</button><button>红桃2</button><button>红桃3</button><button>红桃4</button><button>红桃5</button><button>红桃6</button><button>红桃7</button><button>红桃8</button><button>红桃9</button><button>红桃10</button><button>红桃J</button><button>红桃Q</button><button>红桃K</button>
+						<button>黑桃A</button><button>黑桃2</button><button>黑桃3</button><button>黑桃4</button><button>黑桃5</button><button>黑桃6</button><button>黑桃7</button><button>黑桃8</button><button>黑桃9</button><button>黑桃10</button><button>黑桃J</button><button>黑桃Q</button><button>黑桃K</button>
+						<button>方块A</button><button>方块2</button><button>方块3</button><button>方块4</button><button>方块5</button><button>方块6</button><button>方块7</button><button>方块8</button><button>方块9</button><button>方块10</button><button>方块J</button><button>方块Q</button><button>方块K</button>
+						<button>梅花A</button><button>梅花2</button><button>梅花3</button><button>梅花4</button><button>梅花5</button><button>梅花6</button><button>梅花7</button><button>梅花8</button><button>梅花9</button><button>梅花10</button><button>梅花J</button><button>梅花Q</button><button>梅花K</button>
+						-->
+					</div>
+				</div>
+				<!--空白结算弹框-->
+				<div id="ifNotChoose">
+					<p class="suggest">您尚无手牌  请选择发牌获得手牌</p>
+					<button id="yes">确认</button>
+				</div>
+				<!--加注弹框-->
+				<div id="addWagerArea">
+					<table>
+						<tr>
+							<td class="nowWager">现在赌额:</td>
+						</tr>
+						<tr id="nowWager">
+							
+						</tr>
+						<tr>
+							<td class="yourGold">你的金币:</td>
+						</tr>
+						<tr id="yourGold">
+							
+						</tr>
+					</table>
+					<form>
+						<p class="addWagerNum">请输入加注金额</p>
+						<input type="number" id="numArea"/>
+						<input type="button" id="sent" value="确认"/>
+					</form>
+				</div>
+				<!--你赢了弹框-->
+				<div id="youWin">
+					<p class="win">恭喜你赢了！</p>
+					<img src="img/winner.jpg" />
+					<button class="GoOn">继续游戏</button>
+					<!--<button class="noPlay">退出</button>-->
+					<form>
+						<input type="submit" class="noPlay" value="退出" />
+					</form>
+				</div>
+				<!--你输了弹框-->
+				<div id="youLost">
+					<p class="lost">恭喜你输了！</p>
+					<p class="theLost">失败！</p>
+					<button class="GoOn">继续游戏</button>
+					<!--<button class="noPlay">退出</button>-->
+					<form>
+						<input type="submit" class="noPlay" value="退出" />
+					</form>
+				</div>
+			</div>
+
+			<!--游戏介绍区域-->
+			<div class="introduce cardArea">
+				<!--卡牌暂时-->
+				<div>
+					<img src="img/牌组.jpg" style="width: 600px;height: 250px;" />
+
+					<!--规则介绍-->
+					<button style="float: initial;" id="p">请点击PLAY开始游戏</button>
+					<!--确认按钮-->
+					<button style="float: right;" id="OK">PLAY</button>
+				</div>
+			</div>
+
+			<div id="bgmMute">
+				<img src="img/静音.png">
+			</div>
+			<!-- 音频标签-->
+			<audio autoplay="autoplay" loop="loop" id="BGM">
+				<source src="mp4/斗地主bgm.mp3"></source>
+			</audio>
+
+			<audio id="MCard">
+				<source src="mp4/摸牌.mp3"></source>
+			</audio>
+
+			<audio id="TCard">
+				<source src="mp4/翻牌.mp3"></source>
+			</audio>
+
+			<audio id="win">
+				<source src="mp4/欢呼1.mp3"></source>
+			</audio>
+			<audio id="fail">
+				<source src="mp4/失败.mp3"></source>
+			</audio>
+
+			<audio id="MGold">
+				<source src="mp4/金币1.mp3"></source>
+			</audio>
+	</body>
+
+</html>

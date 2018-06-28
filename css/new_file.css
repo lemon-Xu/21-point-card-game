@@ -1,0 +1,681 @@
+/*全局样式*/
+
+body {
+	/*width: 100%;
+	height: 100%;*/
+	width: 1250px;
+	height: 600px;
+}
+
+
+/*背景样式*/
+
+.div {
+	position: relative;
+	/*width: 100%;*/
+	width: 1300px;
+	height: 600px;
+	background: url(../背景图.jpg);
+	/*background-size: 100% 600px;*/
+	background-size: 1350px 600px;
+	background-repeat: no-repeat;
+}
+
+
+/*图片样式*/
+
+span {
+	position: absolute;
+	margin-top: 30px;
+}
+
+span img {
+	width: 70px;
+	height: 100px;
+}
+
+
+/*牌的位置*/
+
+.first {
+	position: absolute;
+	margin-left: 16px;
+	z-index: 1;
+}
+
+.second {
+	position: absolute;
+	margin-left: 24px;
+	z-index: 1;
+}
+
+.third {
+	position: absolute;
+	margin-left: 32px;
+	z-index: 1;
+}
+
+.fourth {
+	position: absolute;
+	margin-left: 40px;
+	z-index: 1;
+}
+
+
+/*牌组样式*/
+
+.paizu {
+	font-family: "微软雅黑";
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	margin-top: 130px;
+	margin-left: 45px;
+}
+
+
+/*庄家*/
+
+.holder {
+	position: absolute;
+	margin-left: 580px;
+	margin-top: 10px;
+}
+
+.holder img {
+	width: 130px;
+	height: 90px;
+}
+
+.holder1 {
+	position: absolute;
+	font-size: 25px;
+	font-family: "微软雅黑";
+	margin-left: 42px;
+	margin-top: 10px;
+}
+
+
+/*金币*/
+
+.money1 img {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	margin-left: 980px;
+	margin-top: 0px;
+}
+
+.money1_num1 {
+	color: whitesmoke;
+	position: absolute;
+	margin-left: 1037px;
+	margin-top: 22px;
+}
+
+.money2 img {
+	position: absolute;
+	margin-left: 980px;
+	margin-top: 500px;
+	width: 50px;
+	height: 50px;
+}
+
+.money2_num2 {
+	color: whitesmoke;
+	position: absolute;
+	margin-left: 1037px;
+	margin-top: 556px;
+}
+
+
+/*修改了外挂的显示位置*/
+/*外挂*/
+
+/*作弊看牌*/
+#look{
+	position: absolute;
+	color: white;
+	width: 40px;
+	margin-left: 111px;
+	margin-top: -38px;
+	/*width: 60px; */
+	/*background-color: #F5F5F5;*/
+	/*border-radius: 5px;*/
+}
+
+.bug{
+	position: absolute;
+	margin-left: 550px;
+	margin-top: 530px;
+}
+.bugarea{
+	color:white;
+}
+.buglong{
+	font-size: 10px;
+	position: absolute;
+	margin-left: -200px;
+	color: black;
+	width: 900px;
+}
+
+/*对游戏区域进行了美化*/
+/*牌区*/
+
+.cardArea {
+	position: absolute;
+	margin-top: 180px;
+	margin-left: 350px;
+	width: 600px;
+	height: 250px;
+	background-color: bisque;
+	border: solid 1px;
+	border-radius: 5px;
+}
+
+.holder_hold1 {
+	border: solid 1px brown;
+}
+/*确认*/
+#OK{
+	position: absolute;
+	margin-left: 210px;
+	margin-top: -50px;
+	width: 155px;
+	height: 35px;
+	color: #FFF8DC;
+	background-color: #000000;
+	border-radius: 15px;
+	outline: none;
+}
+/*PLAY*/
+#p{
+	position: absolute;
+	margin-left: 125px;
+	margin-top: -220px;
+	color: red;
+	font-size: 35px;
+	width: 350px;
+	height: 75px;
+	border-radius: 10px;
+	background-color: aquamarine;
+	outline: none;
+}
+/*发牌*/
+#getCard{
+	position: absolute;
+	width:65px ;
+	border-radius: 5px;
+	background-color: #FF0000;
+	outline: none;
+	margin-top:210px;
+	margin-left: 210px;
+	
+}
+/*加注*/
+#addWager{
+	position: absolute;
+	margin-left: 300px;
+	margin-top: 210px;
+	width: 60px;
+	background-color: crimson;
+	border-radius: 5px;
+	outline: none;
+}
+/*结算*/
+#noCard{
+	position: absolute;
+	margin-left: 500px;
+	margin-top: 210px;
+	width: 60px;
+	background-color: beige;
+	border-radius: 5xp;
+	outline: none;
+}
+
+/*以下为隐藏式弹框*/
+/*作弊弹框*/
+#bugArea{
+	position: absolute;
+	margin-left: 135px;
+	width: 350px;
+	height: 160px;
+	background-color: white;
+	border: solid 1px #000000;
+	border-radius: 8px;
+}
+/*作弊弹框  — — 下一张牌*/
+#nextCard{
+	position: absolute;
+	margin-top: 10px;
+	margin-left: 130px;
+	font-family: "仿宋";
+}
+/*作弊弹框 — — 下一张牌 — — 图*/
+#nextCardArea{
+	position: absolute;
+	width:50px ;
+	height: 65px;
+	margin-top:40px;
+	margin-left: 150px;
+	/*border: solid 1px;   </*这样一行记得注释掉*/>*/
+}
+/*作弊弹框 — — 要*/
+#Choose{
+	position: absolute;
+	margin-top: 130px;
+	margin-left: 110px;
+	font-family: "仿宋";
+	color: #FFFFFF;
+	width: 42px;
+	background-color:red;
+	border-radius: 5px;
+	outline: none;
+}
+/*作弊弹框 — — 不要*/
+#notChoose{
+	position: absolute;
+	margin-top: 130px;
+	margin-left: 210px;
+	font-family: "仿宋";
+	border-radius: 5px;
+	outline: none;
+}
+/*高级作弊弹框*/
+#theOtherBugArea{
+	position: absolute;
+	width: 800px;
+	height: 250px;
+	background-color: darkgray;
+	margin-left: -105px;
+	border-radius: 5px;
+	/*display: none;   /*现设为隐藏模式*/*/
+}
+/*高级作弊弹框--电脑手牌*/
+.holderCard{
+	position: absolute;
+	margin-left: 222px;
+	margin-top: 10px;
+	width: 350px;
+	height: 120px;
+	border-radius: 5px;
+	background-color:lightgreen;
+}
+.holderCard1{
+	font-size:15px;
+	font-family: "微软雅黑";
+	position: absolute;
+	margin-left: 134px;
+	margin-top: 3px;
+}
+/*高级作弊弹框--电脑手牌--牌*/
+#holderCArea{
+	position: absolute;
+	margin-left: 30px;
+	margin-top: 35px;
+}
+
+/*高级作弊框--放弃*/
+#giveUp{
+	position: absolute;
+	margin-top: 110px;
+	margin-left: 720px;
+	outline: none;
+	background-color: darkslateblue;
+	width: 65px;
+}
+
+/*任意选牌区*/
+.xuanpai{
+	position: absolute;
+	margin-left: 340px;
+	margin-top: 130px;
+	font-family: "微软雅黑";
+	font-size: 15px;
+}
+.chooseArea{
+	position: absolute;
+	margin-top: 155px;
+	margin-left: 10px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.chooseArea button{
+	font-size: 12px;
+	width: 60px;
+	height: 23px;
+	outline: none;
+}
+/*空白结算弹框*/
+#ifNotChoose{
+	position: absolute;
+	margin-left: 135px;
+	width: 350px;
+	height: 160px;
+	background-color: white;
+	border: solid 1px #000000;
+	border-radius: 8px;
+	display: none;  </*空白结算弹框现设为隐藏模式*/
+}
+/*空白结算弹框--建议*/
+.suggest{
+	position: absolute;
+	margin-left: 35px;
+	margin-top: 40px;
+	font-family: "微软雅黑";
+	font-size: 20px;
+}
+/*空白结算弹框--确认*/
+#yes{
+	position: absolute;
+	margin-top: 110px;
+	margin-left: 135px;
+	font-size: 25px;
+	width:75px ;
+	background-color: lawngreen;
+	border-radius: 8px;
+	outline: none;
+}
+/*加注弹框*/
+#addWagerArea{
+	position: absolute;
+	margin-left: 135px;
+	width: 350px;
+	height: 160px;
+	background-color: white;
+	border: solid 1px #000000;
+	border-radius: 8px;
+	display: none;  /*加注弹框现设为隐藏模式*/
+}
+/*加注弹框--现在赌额--数字*/
+#nowWager{
+	position: absolute;
+	margin-top: 5px;
+	margin-left: 70px;
+	/*border: solid 1px;   </*这一行记得注释掉*/>*/
+	width: 70px;
+	height: 18px;
+}
+/*加注弹框--现在赌额*/
+.nowWager{
+	position: absolute;
+	margin-top: 5px;
+	font-family: "微软雅黑";
+}
+/*加注弹框--你的金币--数字*/
+#yourGold{
+	position: absolute;
+	margin-top: 30px;
+	margin-left: 70px;
+	/*border: solid 1px;  </*这一行记得注释掉*/>*/
+	width: 70px;
+	height:18px;
+}
+/*加注弹框--你的金币*/
+.yourGold{
+	position: absolute;
+	margin-top: 30px;
+	font-family: "微软雅黑";
+}
+/*加注弹框--输入加注金额*/
+.addWagerNum{
+	position: absolute;
+	font-family: "微软雅黑";
+	margin-top: 55px;
+	margin-left: 4px;
+	
+}
+/*加注弹框--加注框*/
+#numArea{
+	position: absolute;
+	margin-top: 58px;
+	margin-left: 130px;
+	width: 100px;
+	height:15px;
+}
+/*加注弹框--确认*/
+#sent{
+	position: absolute;
+	margin-left: 150px;
+	margin-top: 110px;
+	width: 60px;
+	font-family: "微软雅黑";
+	background-color: aqua;
+	outline: none;
+	border-radius: 5px;
+}
+/*你赢了弹框*/
+#youWin{
+	position: absolute;
+	margin-left: 135px;
+	width: 350px;
+	height: 160px;
+	background-color: white;
+	border: solid 1px #000000;
+	border-radius: 8px;
+	display: none;  /*你赢了弹框现设为隐藏模式*/
+}
+/*你赢了弹框--恭喜*/
+.win{
+	position: absolute;
+	margin-left: 110px;
+	margin-top: 0px;
+	color: red;
+	font-family: pristina;
+	font-size: 25px;
+}
+/*你赢了弹框--图片*/
+#youWin img{
+	position: absolute;
+	margin-left: 135px;
+	margin-top: 35px;
+	width: 80px;
+	height: 90px;
+}
+/*你赢了弹框--继续游戏*/
+.GoOn{
+	position: absolute;
+	margin-left: 25px;
+	margin-top: 130px;
+	background-color: black;
+	color: white;
+	outline: none;
+	border-radius: 5px;
+}
+/*你赢了弹框--退出*/
+.noPlay{
+	position: absolute;
+	width: 68px;
+	margin-left: 255px;
+	margin-top: 130px;
+	color: black;
+	background-color: bisque;
+	outline: none;
+	border-radius: 5px;
+}
+/*你输了弹框*/
+#youLost{
+	position: absolute;
+	margin-left: 135px;
+	width: 350px;
+	height: 160px;
+	background-color: white;
+	border: solid 1px #000000;
+	border-radius: 8px;
+	display: none;    /*你输了弹框现设为隐藏模式*/
+}
+/*你输了弹框--恭喜*/
+.lost{
+	position: absolute;
+	margin-left: 110px;
+	margin-top: 0px;
+	color: red;
+	font-family: pristina;
+	font-size: 25px;
+}
+/*你输了弹框--失败*/
+.theLost{
+	position: absolute;
+	color: coral;
+	margin-left: 100px;
+	font-family: "华文行楷";
+	font-size: 55px;
+}
+/*你输了弹框--继续游戏*/
+#GoOn{
+	position: absolute;
+	margin-left: 25px;
+	margin-top: 130px;
+	background-color: black;
+	color: white;
+	outline: none;
+	border-radius: 5px;
+}
+/*你输了弹框--退出*/
+#noPlay{
+	position: absolute;
+	width: 68px;
+	margin-left: 255px;
+	margin-top: 130px;
+	color: black;
+	background-color: bisque;
+	outline: none;
+	border-radius: 5px;
+}
+/*赌注*/
+#goldWager{
+	position: absolute;
+	margin-left: 260px;
+	color: red;
+}
+/*电脑点数*/
+#computerNum{
+	position: absolute;
+	margin-left: 260px;
+	margin-top: 25px;
+}
+/*电脑牌*/
+#computerCArea{
+	position: absolute;
+	margin-left: 150px;
+	margin-top: 45px;
+}
+/*玩家点数*/
+#playerNum{
+	position: absolute;
+	margin-left: 260px;
+	margin-top: 110px;
+}
+/*玩家牌*/
+#playerCArea{
+	position: absolute;
+	margin-left: 150px;
+	margin-top: 130px;
+}
+/*游戏规则*/
+
+a {
+	text-decoration: none;
+}
+
+.Sliderbox {
+	position: absolute;
+	margin-left: 25px;
+	margin-top: 150px;
+}
+.Sliderbox div a span{
+	color: aquamarine;
+	margin-top: 10px;
+	background-color: #DEB887;
+	width: 65px;
+	height: 50px;
+	border-radius: 8px;
+	line-height:50px ;
+	display: block;
+}
+.Sliderbox .ftname{
+	position: relative;
+	
+}
+.Sliderinfo{
+	position: absolute;
+	margin-top: 60px;
+	background-color:#7FFFD4;
+	width: 500px;
+	height: 120px;
+	border-radius: 5px;
+	display:none;
+	z-index: 1;
+}
+
+.ftname:hover .Sliderinfo{
+	display: block;
+}
+.ftname:hover a span{
+	background-color: cornsilk;
+}
+
+
+/*牌区图片*/
+
+.thebiggest img {
+	position: relative;
+	margin: 0;
+	width: 50px;
+	height: 65px;
+}
+
+
+/*3D变化动画 JS引用*/
+
+
+/* 翻转动化 */
+
+@keyframes turnCard {
+	from {
+		transform: rotateY(90deg);
+	}
+	100% {
+		transform: rotateY(0deg);
+	}
+}
+
+.turnCard img {
+	animation: turnCard 1s forwards;
+}
+
+
+/* 卡背动画 */
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	50% {
+		opacity: 50%;
+	}
+	100% {
+		opacity: 100%;
+	}
+}
+
+.fadeIn {
+	animation: fadeIn 0.5s;
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 100%;
+	}
+	50% {
+		opacity: 50%;
+	}
+	100% {
+		opacity: 0%;
+	}
+}
+
+.fadeOut {
+	animation: fadeOut 0.5s;
+}
